@@ -5,20 +5,18 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 const Inbox = ()=>{
 
-//     const [data, setData] = useState([]);// initializing data state
+   const [data, setData] = useState([]);// initializing data state
 
-//     const fetchData = async()=>{
-//         var res = await axios.get('http://localhost/4000/api/inbox/');
-//         res.then((response)=>{
-//           setData(response.data)
-//           console.log(data)
-//       })
-
-
-//     }
-//  useEffect(() =>{
-//     fetchData(),[]
-//     });
+useEffect(() => {
+  axios.get('http://localhost:4000/api/inbox/')
+    .then((response) => {
+      console.log('Fetched existing category data:', response.data);
+      setData(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}, []);
 
     const messages = [
         {
@@ -83,6 +81,7 @@ const Inbox = ()=>{
                 message = {message.message}
                 />
               ))}
+              
           </div>
         </div>
     )
