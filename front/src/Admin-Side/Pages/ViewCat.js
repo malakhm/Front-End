@@ -33,12 +33,14 @@ function CategoriesAdmin() {
       <HeaderAdmin>Categories</HeaderAdmin>
       <Link to="/add-category">
       <Button>Add Category</Button>
+
       </Link>
       <div className="categories-container-admin">
         {existingCategoryData.map((category) => (
           <Category key={category._id} name={category.name} image={`http://localhost:4000/${category.image.split("public")[1]}`} categoryId={category._id} />
         ))}
       </div>
+
     </div>
   );
 }
