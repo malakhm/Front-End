@@ -45,7 +45,7 @@ const Header = () => {
             <ul className='header_ul_mobile'>
    
           
-             <li className='home-button-header'><a href="#Home">Home</a></li>
+             <li className='home-button-header'><a href="/">Home</a></li>
                 <li className='Menu-button-header'><a href="Menu">Menu</a></li>
                 <li className='About-button-header'><a href="About">About us</a></li>
                 <li className='contact-button-header'><a href="Contact">Contact us</a></li>

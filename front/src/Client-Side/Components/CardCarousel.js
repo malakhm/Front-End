@@ -38,9 +38,7 @@ const CardCarousel = ()=> {
           
         >
           <Card><Button>read more</Button></Card>
-          <Card><Button>read more</Button></Card>
-          <Card><Button>read more</Button></Card>
-          <Card><Button>read more</Button></Card>
+          
   
       
 
