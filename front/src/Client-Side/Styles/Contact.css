@@ -9,7 +9,7 @@
     background-image: url('../../Client-Side/Assets/header.jpg');}
   .location-info{
     background-image: url('../../Client-Side/Assets/header.jpg');}
-@media screen and (min-width: 1600px){
+@media screen and (min-width: 1200px){
     
 
 
@@ -38,15 +38,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 641px;
-    height: 600px;
+    width: 541px;
+    height: 500px;
     margin-bottom: 100px;
     margin-left: 50px;
 }
 
 .location-image{
-    width: 641px;
-    height: 600px;
+    width: 541px;
+    height: 500px;
 
     border-radius: 15px;
     margin-right: 50px
@@ -88,7 +88,6 @@ margin-left: 50px;
 
 .contact-us input{
     align-self: center;
-    /* margin-bottom: 70px; */
     
 }
 .contact-us-form button {
@@ -147,10 +146,13 @@ margin-left: 50px;
     border: none;
     align-self: center;
 }
+span {
+    padding: 0;
+}
 
 }
 
-@media screen and (max-width: 1599px){
+@media screen and (max-width: 1199px){
     
 
 
@@ -161,23 +163,24 @@ margin-left: 50px;
         flex-direction: column;
     }
     
+    
     .location{
         display: flex;
     }
     
     .location-info{
             background-color: #808080;
-                border-radius: 15px;
+            border-radius: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 200px;
+        width: 220px;
         height: 300px;
     }
     
     .location-image{
-        width: 180px;
+        width: 220px;
         height: 300px;
         border-radius: 15px;
     }
@@ -210,7 +213,7 @@ margin-left: 50px;
     
     .contact-us input{
         align-self: center;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
     }
     
     .contact-us label{
@@ -223,6 +226,7 @@ margin-left: 50px;
         align-self: center;
         font-size: 25px;
     }
+   
     
     .contact-us-image{
         width: 180px;

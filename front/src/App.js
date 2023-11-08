@@ -12,6 +12,9 @@ import Contact from './Client-Side/Pages/Contact';
 import SideBar from '../src/Admin-Side/Components/SideBar';
 import ViewProducts from './Admin-Side/Pages/ViewProducts';
 import AddProducts from '../src/Admin-Side/Pages/AddPro';
+import { MdDelete } from "react-icons/md";
+import { faPen  } from '@fortawesome/free-solid-svg-icons';
+import {FaStar} from "react-icons/fa";
 import './index.css';
 
 function App() {
@@ -20,7 +23,7 @@ function App() {
    
     <>
   
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Header/>
 
     <div className='pages'>
@@ -50,9 +53,9 @@ function App() {
     </div>
     <Footer/>
 
-    </BrowserRouter> */}
+    </BrowserRouter>
    
-   <BrowserRouter>
+   {/* <BrowserRouter>
    <div className='adminSideBar'>
     <SideBar/>
     <Routes>
@@ -81,9 +84,11 @@ function App() {
           element={<AddProduct />}
           />
 
+          
+
     </Routes>
    </div>
-   </BrowserRouter>
+   </BrowserRouter> */}
  
 
   {/* <BrowserRouter>
@@ -113,8 +118,8 @@ function App() {
      
       </Routes>
       <Footer/>
-    </div>
-   <div className='adminSideBar'>
+    </div> */}
+   {/* <div className='adminSideBar'>
     <SideBar/>
     <Routes>
     <Route
@@ -138,8 +143,8 @@ function App() {
           />
 
     </Routes>
-   </div>
-   </BrowserRouter> */}
+   </div> */}
+   {/* </BrowserRouter> */}
    
     </>
   );

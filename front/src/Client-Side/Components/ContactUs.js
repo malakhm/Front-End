@@ -64,8 +64,8 @@ let addReview = async (e)=>{
           <div className="location-info">
             
             <p className="location-desc">
-              Al Mawkib St - Al Zahiyah - E16 -<br />
-              Abu Dhabi - United Arab Emirates
+            Abu Dhabi - United Arab Emirates<br />
+              Al Mawkib St - Al Zahiyah - E16 -
             </p>
           </div>
         </div>
