@@ -47,7 +47,7 @@ function CategoriesAdmin() {
       <div className='categories-container-admin'>
         
       {data.map((category) => (
-                console.log(category.img),
+      
                 <Category name={category.name} img={category.img}/>
               ))}
       
