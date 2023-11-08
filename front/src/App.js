@@ -20,7 +20,7 @@ function App() {
    
     <>
   
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Header/>
 
     <div className='pages'>
@@ -50,9 +50,9 @@ function App() {
     </div>
     <Footer/>
 
-    </BrowserRouter> */}
+    </BrowserRouter>
    
-   <BrowserRouter>
+   {/* <BrowserRouter>
    <div className='adminSideBar'>
     <SideBar/>
     <Routes>
@@ -83,7 +83,7 @@ function App() {
 
     </Routes>
    </div>
-   </BrowserRouter>
+   </BrowserRouter> */}
  
 
   {/* <BrowserRouter>
