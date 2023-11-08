@@ -8,7 +8,7 @@ const Footer =() => {
         <div className='Footer'>
           <img className='footerlogo' alt='alt: LOGO' src={Logo}/> 
             <div className='moretoexplore'>
-                <h4>More To Explore</h4>
+                <p className='description'>More To Explore</p>
                 <ul className='ulfooter'>
                     <li><a href="#Home">Home</a></li>
                     <li><a href="About">About Us</a></li>
@@ -17,7 +17,7 @@ const Footer =() => {
                 </ul>
             </div>
             <div className='contactinfo'>
-                <h4>Contact Info</h4>
+                <p className='description'>Contact Info</p>
                 <div className='ulfooter1'>
                 <a href="https://wa.me/message/6OCI2AOKZB47D1?src=qr" target="_blank"><img className='phonelogo' alt='alt: PHONE LOGO' src={phonelogo}/></a>
                 <a href="https://wa.me/message/6OCI2AOKZB47D1?src=qr" target="_blank"><p>+971 58 546 2004</p></a>

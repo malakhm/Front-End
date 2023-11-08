@@ -4,6 +4,7 @@ import Button from '../Components/MainButton'
 import React from 'react'
 import ItemCarousel from '../Components/Products'
 import '../Styles/Menu.css'
+
 function Menu() {
   return (
     <div>

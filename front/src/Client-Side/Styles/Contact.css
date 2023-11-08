@@ -38,22 +38,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 841px;
+    width: 641px;
     height: 600px;
-    margin-bottom: 200px;
-    margin-left: 100px;
+    margin-bottom: 100px;
+    margin-left: 50px;
 }
 
 .location-image{
-    width: 865px;
+    width: 641px;
     height: 600px;
 
     border-radius: 15px;
-    margin-right: 100px
+    margin-right: 50px
 }
 
 .location-title{
-    font-size: 70px;
+    font-size: 50px;
     display: flex;
     padding-bottom: 100px;
     color: #333333;
@@ -79,20 +79,23 @@
     flex-direction: column;
     background-image: url('../../Client-Side/Assets/header.jpg');
 border-radius: 15px;
- width: 841px;
-height: 900px;
-
-margin-left: 200px;
+ width: 641px;
+height: 600px;
+margin-left: 50px;
 /* box-shadow: 2px 1px 80px 0.5px rgba(8,7,16,0.6); */
 
 }
-.contact-us-firstName{
-    margin-top: 100px;
-}
+
 .contact-us input{
     align-self: center;
-    margin-bottom: 70px;
+    /* margin-bottom: 70px; */
     
+}
+.contact-us-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .contact-us label{
@@ -104,14 +107,22 @@ margin-left: 200px;
 
 
 .contact-us-image{
-    width: 865px;
-    height: 900px;
+    width: 641px;
+    height: 600px;
     border-radius: 15px;
+    margin-right: 50px;
 }
 
 .contact-us-title{
-    font-size: 70px;
+    font-size: 50px;
     color: #333333;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+
+}
+.contact-us-title span {
+    margin-right: 15px;
 }
 .contact-us-span{
     color: #C11708;
@@ -130,7 +141,7 @@ margin-left: 200px;
     border-radius: 8px;
     width: 400px;
     height: 200px;
-    line-height: 150px; /* Set the line height equal to the textarea height */
+    line-height: 100px; /* Set the line height equal to the textarea height */
     padding-top: 0; /* Remove top padding to vertically center the text */
     padding-bottom: 0;
     border: none;
@@ -210,16 +221,13 @@ margin-left: 200px;
     }
     .contact-us-title{
         align-self: center;
+        font-size: 25px;
     }
     
     .contact-us-image{
         width: 180px;
         height: 300px;
         border-radius: 15px;
-    }
-    
-    .contact-us-title{
-        font-size: 25px;
     }
     
     .contact-us-input{

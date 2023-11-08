@@ -22,7 +22,7 @@ const Header = () => {
                     <li className='contact-button-header'><a href="/Contact">Contact us</a></li>
                 </ul>
                 
-                <div><img className='headerlogo' alt='alt: LOGO' src={Logo}/></div>
+                <div><a href="/"><img className='headerlogo' alt='alt: LOGO' src={Logo}/></a></div>
             
 
                 <div className='phonenumber'>
@@ -31,7 +31,7 @@ const Header = () => {
                 </div>
 
             </nav>
-            <img className='headerlogo-mobile' alt='alt: LOGO' src={Logo}/>
+            <a href="/"><img className='headerlogo-mobile' alt='alt: LOGO' src={Logo}/></a>
             <FontAwesomeIcon icon={collapse?faBars:faXmark} className="header_icon" onClick={()=>setCollapsed(!collapse)}/>
             
             
