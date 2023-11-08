@@ -24,12 +24,7 @@ useEffect(() => {
 }, []);
 
     
-  const readFeature = ()=>{
-    data.map((record)=>{
-      console.log(record._id)
-    })
-  }
-readFeature()
+ 
 
     return(
         <div className="big-big-admin-container">
@@ -39,13 +34,14 @@ readFeature()
            
             
             {data.map((message) => (
-                console.log(message.status),
+           
                 <Message 
                 firstName={message.firstName} 
                 lastName={message.lastName} 
                 email = {message.email}
                 status = {message.status}
                 id = {message._id}
+               
                 message = {message.message}
                 />
               ))}
