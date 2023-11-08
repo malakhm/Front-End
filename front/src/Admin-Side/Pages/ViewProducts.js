@@ -31,7 +31,9 @@ function ViewProducts() {
     }
 
     fetchData();
-  },[]);
+
+  },[existingProductData]);
+
     
   
   return (

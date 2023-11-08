@@ -26,7 +26,9 @@ function CategoriesAdmin() {
     }
 
     fetchData();
-  }, []);
+
+  }, [existingCategoryData]);
+
 
   return (
     <div className="admin-MOTHER">

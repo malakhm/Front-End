@@ -8,10 +8,12 @@ import Categoriesadmin from './Admin-Side/Pages/ViewCat';
 import Login from '../src/Admin-Side/Pages/Login';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import AddProduct from '../src/Admin-Side/Pages/AddPro';
+import AddCategory from '../src/Admin-Side/Pages/AddCat'
 import Contact from './Client-Side/Pages/Contact';
 import SideBar from '../src/Admin-Side/Components/SideBar';
 import ViewProducts from './Admin-Side/Pages/ViewProducts';
 import AddProducts from '../src/Admin-Side/Pages/AddPro';
+import AdminEditCategory from "../src/Admin-Side/Pages/EditCat"
 import './index.css';
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
    
     <>
   
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Header/>
 
     <div className='pages'>
@@ -45,14 +47,19 @@ function App() {
         element={<Contact />}
         />
 
+
+
+
      
       </Routes>
+
+      
     </div>
     <Footer/>
 
-    </BrowserRouter> */}
+    </BrowserRouter>
    
-   <BrowserRouter>
+   {/* <BrowserRouter>
    <div className='adminSideBar'>
     <SideBar/>
     <Routes>
@@ -81,9 +88,18 @@ function App() {
           element={<AddProduct />}
           />
 
+            <Route
+            path="/add-category"
+            element={<AddCategory/>}
+            />
+            <Route
+            path = "/edit-category"
+            element={<AdminEditCategory/>}
+            />
+
     </Routes>
    </div>
-   </BrowserRouter>
+   </BrowserRouter> */}
  
 
   {/* <BrowserRouter>
@@ -113,8 +129,8 @@ function App() {
      
       </Routes>
       <Footer/>
-    </div>
-   <div className='adminSideBar'>
+    </div> */}
+   {/* <div className='adminSideBar'>
     <SideBar/>
     <Routes>
     <Route
@@ -138,8 +154,8 @@ function App() {
           />
 
     </Routes>
-   </div>
-   </BrowserRouter> */}
+   </div> */}
+   {/* </BrowserRouter> */}
    
     </>
   );
