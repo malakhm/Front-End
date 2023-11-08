@@ -1,18 +1,42 @@
 import { useState } from "react"
 import '../Styles/Message.css'
+import axios from "axios";
 const Message = (prop)=>{
     const [message, SetMessage] = useState('')
-    const [read, SetRead] = useState(prop.status)
+    const [status, SetStatus] = useState(prop.status)
 
-    const readFeature = ()=>{
-   
-        SetRead(true);
+
+    let markRead = async (e)=>{
+    
+      e.preventDefault()
+    
+      try{
+        
+          await axios.patch(`http://localhost:4000/api/inbox/${prop.id}`,{
+            status:true
+            
+          })
+          SetStatus(true)
+          alert(prop.id)
+          alert(status)
+
+          
+          
+    
+      }
+    
+    
+      catch(e){
+          console.log(e);
+    
+      }
+    
     }
 
     return(
         <>
-        {read?
-        <button className="Message" onClick={readFeature}>
+        {status?
+        <button className="Message" onClick={markRead}>
             
             <div className="text-container">
                 <p>Message From: <span>{prop.firstName}{prop.lastName}</span></p>
@@ -23,7 +47,7 @@ const Message = (prop)=>{
         
         </button>:
 
-        <button className="Message unread-bg" onClick={readFeature}>
+        <button className="Message unread-bg" onClick={markRead}>
             
         <div className="text-container unread-bg">
         <p className="unread">Message From: {prop.firstName}{prop.lastName}</p>
