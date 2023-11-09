@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { MdDelete } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+
 import '../Styles/SinglePro.css';
 
 const Product = (props) => {
@@ -41,7 +43,13 @@ const Product = (props) => {
           <FaStar className="admin-icon-for-products-favorite-star" />
         </div>
         <div className="admin-icon-for-products">
-          <FontAwesomeIcon icon={faPen} className="products-icon-edit-admin" />
+        <Link
+            to={{
+              pathname: `/edit-product/${props.productId}`, // Specify the target route
+              state: { productId: props.productId }, // Pass categoryId as a custom prop
+            }} >
+        <FontAwesomeIcon icon={faPen} className="products-icon-edit-admin" />
+        </Link>
           <MdDelete className="products-icon-delete-admin" onClick={handleDeleteClick} />
         </div>
       </div>

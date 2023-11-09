@@ -14,6 +14,7 @@ import SideBar from '../src/Admin-Side/Components/SideBar';
 import ViewProducts from './Admin-Side/Pages/ViewProducts';
 import AddProducts from '../src/Admin-Side/Pages/AddPro';
 import AdminEditCategory from "../src/Admin-Side/Pages/EditCat"
+import AdminEditProduct from '../src/Admin-Side/Pages/EditPro'
 import './index.css';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
    
     <>
   
-    <BrowserRouter>
+    {/* <BrowserRouter>
     <Header/>
 
     <div className='pages'>
@@ -57,9 +58,9 @@ function App() {
     </div>
     <Footer/>
 
-    </BrowserRouter>
+    </BrowserRouter> */}
    
-   {/* <BrowserRouter>
+   <BrowserRouter>
    <div className='adminSideBar'>
     <SideBar/>
     <Routes>
@@ -93,14 +94,18 @@ function App() {
             element={<AddCategory/>}
             />
             <Route
-            path = "/edit-category"
+            path = "/edit-category/:id"
             element={<AdminEditCategory/>}
+            />
+            <Route
+            path = "/edit-product/:id"
+            element={<AdminEditProduct/>}
             />
 
     </Routes>
    </div>
    </BrowserRouter>
-  */}
+ 
 
   {/* <BrowserRouter>
     <div className='pages'>
