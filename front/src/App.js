@@ -13,9 +13,14 @@ import Contact from './Client-Side/Pages/Contact';
 import SideBar from '../src/Admin-Side/Components/SideBar';
 import ViewProducts from './Admin-Side/Pages/ViewProducts';
 import AddProducts from '../src/Admin-Side/Pages/AddPro';
-import AdminEditCategory from "../src/Admin-Side/Pages/EditCat";
+
+import AdminEditCategory from "../src/Admin-Side/Pages/EditCat"
+import AdminEditProduct from '../src/Admin-Side/Pages/EditPro'
+
+
 import SideBarShow from './NavbarShow/SideBarShow';
 import NavbarShow from './NavbarShow/NavbarShow';
+
 import './index.css';
 
 function App() {
@@ -23,86 +28,11 @@ function App() {
   return (
    
     <>
-  
-    {/* <BrowserRouter>
-    <Header/>
 
-    <div className='pages'>
-      <Routes>
-        <Route
-        path="/"
-        element={<Home />}
-        />
-
-       <Route
-        path="/Menu"
-        element={<Menu />}
-        />
-
-      <Route
-        path="/About"
-        element={<AboutUs />}
-        />
-
-      <Route
-        path="/Contact"
-        element={<Contact />}
-        />
-
-
-
-
-     
-      </Routes>
-
-      
-    </div>
-    <Footer/>
-
-    </BrowserRouter> 
    
-   <BrowserRouter>
-   <div className='adminSideBar'>
-    <SideBar/>
-    <Routes>
-    <Route
-          path="/admin"
-          element={<Login />}
-          />
 
-      <Route
-          path="/admin/home"
-          element={<Categoriesadmin />}
-          />
-
-      <Route
-          path="/admin/products"
-          element={<ViewProducts />}
-          />
-
-          <Route
-          path="/admin/inbox"
-          element={<Inbox />}
-          />
-
-<Route
-          path="/add-product"
-          element={<AddProduct />}
-          />
-
-            <Route
-            path="/add-category"
-            element={<AddCategory/>}
-            />
-            <Route
-            path = "/edit-category"
-            element={<AdminEditCategory/>}
-            />
-
-    </Routes>
-   </div>
-   </BrowserRouter> */}
   <NavbarShow>
+
     <Header/>
   
   </NavbarShow>
