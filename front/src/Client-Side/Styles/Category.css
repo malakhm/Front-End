@@ -15,6 +15,7 @@
   .categoryimage {
     height: 170px;
     width: 200px;
+    border-radius: 20px;
   }
   .flex-item p {
     font-size: 20px;
