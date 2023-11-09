@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { MdDelete } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
+import {CiStar} from 'react-icons/ci'
 import '../Styles/SinglePro.css';
 
 const Product = (props) => {
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [recommended, setRecommended] = useState(props.recommended)
 
   const handleDeleteClick = () => {
     setConfirmDelete(true);
@@ -34,11 +36,75 @@ const Product = (props) => {
     }
   };
 
+  
+
+  var handlStarClickRemove = async (e)=>{
+    
+    e.preventDefault()
+  
+    try{
+      
+        await axios.patch(`http://localhost:4000/api/products/${props.productId}`,{
+          recommended:false
+          
+        })
+        setRecommended(false)
+    
+        console.log("from the state remove recommended", recommended)
+         
+  
+    }
+  
+  
+    catch(e){
+        console.log(e);
+  
+    }
+  
+  }
+
+  var handlStarClickAdd = async (e)=>{
+    
+    e.preventDefault()
+  
+    try{
+      
+        await axios.patch(`http://localhost:4000/api/products/${props.productId}`,{
+          recommended:true
+          
+        })
+        setRecommended(true)
+      
+        console.log("from the state add recommended", recommended)
+     
+       
+
+        
+        
+  
+    }
+  
+  
+    catch(e){
+        console.log(e);
+  
+    }
+  
+  }
+
+
+
   return (
     <div className="admin-products-component-with-icons">
       <div className="admin-icon-for-products-all">
         <div className="admin-icon-for-products-favorite">
-          <FaStar className="admin-icon-for-products-favorite-star" />
+          {!recommended?
+          
+          <FaStar className="admin-icon-for-products-favorite-star" onClick={handlStarClickAdd}/>
+          :
+          <CiStar className="admin-icon-for-products-favorite-star-empty" onClick={handlStarClickRemove}/>
+          }
+          
         </div>
         <div className="admin-icon-for-products">
           <FontAwesomeIcon icon={faPen} className="products-icon-edit-admin" />
