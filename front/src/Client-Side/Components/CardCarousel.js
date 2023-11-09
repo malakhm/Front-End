@@ -8,6 +8,9 @@ import '../Styles/carousel.css';
 import Button from '../Components/MainButton'
 const CardCarousel = ()=> {
 
+ 
+
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },

@@ -77,4 +77,12 @@
      
         width: 50%;
     }
+    .Home-Cart{
+        height: 350px;
+    width: 180px;
+    }
+    .Home-Cart img{
+        width: 70px;
+        height: 70px;
+    }
 }

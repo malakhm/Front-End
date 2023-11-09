@@ -99,8 +99,8 @@ function App() {
 
     </Routes>
    </div>
-   </BrowserRouter> */}
- 
+   </BrowserRouter>
+  */}
 
   {/* <BrowserRouter>
     <div className='pages'>
