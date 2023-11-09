@@ -10,7 +10,8 @@ import Button from '../../Client-Side/Components/MainButton'
 import HeaderAdmin from '../Components/HeaderAdmin';
 import '../Styles/Products.css'
 function ViewProducts() {
-  
+  const [existingProductData, setExistingProductData] = useState([]);
+
   async function fetchCategories() {
     try {
       const response = await axios.get('http://localhost:4000/api/products/');
@@ -22,7 +23,7 @@ function ViewProducts() {
   }
 
 
-  const [existingProductData, setExistingProductData] = useState([]);
+
 
   useEffect(() => {
     async function fetchData() {
@@ -32,7 +33,7 @@ function ViewProducts() {
 
     fetchData();
 
-  },[existingProductData]);
+  },[]);
 
     
   
@@ -45,9 +46,9 @@ function ViewProducts() {
           <div className='products-container-admin'>
 
       {existingProductData.map((product) => (
-                console.log(product.image),
-                console.log(product.name),
-                <Card name={product.name} description = {product.description} price = {product.price}
+          
+                console.log(product.recommended),
+                <Card recommended = {product.recommended} name={product.name} description = {product.description} price = {product.price}
                 image={`http://localhost:4000/${product.image.split("public")[1]}`} productId={product._id} />        ))}
       
       </div>
