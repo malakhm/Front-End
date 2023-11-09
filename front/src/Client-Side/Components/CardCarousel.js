@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from './Cards'
 import React from 'react'
+import {Link } from 'react-router-dom';
 import '../Styles/carousel.css';
 
 import Button from '../Components/MainButton'
@@ -37,8 +38,10 @@ const CardCarousel = ()=> {
           responsive={responsive}
           
         >
+          <Card><Link to='/Menu'><Button>read more</Button></Link></Card>
+          <Card><Link to='/Menu'><Button>read more</Button></Link></Card>
+          <Card><Link to='/Menu'><Button>read more</Button></Link></Card>
           <Card><Button>read more</Button></Card>
-          
   
       
 

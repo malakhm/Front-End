@@ -11,9 +11,10 @@ const Footer =() => {
                 <p className='description'>More To Explore</p>
                 <ul className='ulfooter'>
                     <li><a href="#Home">Home</a></li>
+                    <li><a href="Menu">Menu</a></li>
                     <li><a href="About">About Us</a></li>
                     <li><a href="Contact">Contact Us</a></li>
-                    <li><a href="Menu">Menu</a></li>
+                    
                 </ul>
             </div>
             <div className='contactinfo'>
