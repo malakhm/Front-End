@@ -8,6 +8,7 @@ const Cards = (prop)=>{
 
     // console.log("fromcard to you : p, ", prop.id)
     return(
+        
         <div className="Home-Cart">
             <img src={prop.image}/>
             <p className="Home-Product-Name">{prop.name}</p>
