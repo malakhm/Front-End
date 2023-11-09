@@ -3,15 +3,16 @@
 import '../Styles/Carts.css'
 import Button from './MainButton'
 
-const Cart = ({ children }, prop)=>{
+const Cards = (prop)=>{
+    const {children} = prop
 
-
+    // console.log("fromcard to you : p, ", prop.id)
     return(
         <div className="Home-Cart">
-            <img src="https://www.w3schools.com/html/img_chania.jpg"/>
-            <p className="Home-Product-Name">Shawarma</p>
+            <img src={prop.image}/>
+            <p className="Home-Product-Name">{prop.name}</p>
             <p className="Home-Product-Description">
-                very delicious product
+                {prop.description}
             </p>
             <span>{children}</span>
 
@@ -20,4 +21,4 @@ const Cart = ({ children }, prop)=>{
     )
 }
 
-export default Cart
+export default Cards
