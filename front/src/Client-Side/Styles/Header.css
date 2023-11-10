@@ -1,11 +1,7 @@
-
-
-
 body{
-    margin: auto;
-    
-    
+    margin: auto;  
 }
+
 header {
     display: flex;
     justify-content: center;

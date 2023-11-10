@@ -54,7 +54,7 @@ return (
         <Categories callBack={ handleCategoryId} />
         <div className="menu-middle-search-item">
             <span className="menu-separator-span">
-                <h3>Fararij</h3>
+                <h3>Items</h3>
             </span>
 
             <form className="menu-middle-separator-search-form"> 

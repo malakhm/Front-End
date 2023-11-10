@@ -28,15 +28,12 @@ function App() {
   return (
    
     <>
-
-   
-
   <NavbarShow>
 
     <Header/>
   
   </NavbarShow>
-  <SideBarShow>  <SideBar/></SideBarShow>
+ 
       <Routes>
         <Route
         path="/"

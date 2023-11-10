@@ -16,7 +16,7 @@ const SideBarShow=({children})=>{
 
     return(
        <>
-            {(adminUrl == '/admin' || adminUrl == '/admin/home'|| adminUrl == '/admin/products' || adminUrl == '/admin/inbox' || adminUrl == '/add-product'  || adminUrl == '/add-category' || adminUrl == '/edit-category:id') ? children: null}
+            {( adminUrl == '/admin/home'|| adminUrl == '/admin/products' || adminUrl == '/admin/inbox' || adminUrl == '/add-product'  || adminUrl == '/add-category' || adminUrl == '/edit-category:id') ? children: null}
             </>
     )
 }

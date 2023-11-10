@@ -1,6 +1,7 @@
 import Message from "../Components/Message";
 import '../Styles/Inbox.css'
 import HeaderAdmin from "../Components/HeaderAdmin";
+import SideBar from "../Components/SideBar";
 import { useState, useEffect } from "react";
 import axios from "axios";
 const Inbox = ()=>{
@@ -27,6 +28,8 @@ useEffect(() => {
  
 
     return(
+      <div className="adminSideBar">
+      <SideBar/>
         <div className="big-big-admin-container">
             <HeaderAdmin>Inbox</HeaderAdmin>
         
@@ -47,6 +50,7 @@ useEffect(() => {
               ))}
               
           </div>
+        </div>
         </div>
     )
 }

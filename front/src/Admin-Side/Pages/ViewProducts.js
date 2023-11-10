@@ -8,6 +8,7 @@ import { MdDelete } from "react-icons/md";
 import Appertizers from '../../Client-Side/Assets/appetizers.png'
 import Button from '../../Client-Side/Components/MainButton'
 import HeaderAdmin from '../Components/HeaderAdmin';
+import SideBar from '../Components/SideBar';
 import '../Styles/Products.css'
 function ViewProducts() {
   const [existingProductData, setExistingProductData] = useState([]);
@@ -38,6 +39,8 @@ function ViewProducts() {
     
   
   return (
+    <div className='adminSideBar'>
+    <SideBar/>
     <div className='admin-MOTHER-products'>
       <HeaderAdmin>Products</HeaderAdmin>
       <Link to="/add-product">
@@ -52,6 +55,7 @@ function ViewProducts() {
                 image={`http://localhost:4000/${product.image.split("public")[1]}`} productId={product._id} />        ))}
       
       </div>
+    </div>
     </div>
   )
 }

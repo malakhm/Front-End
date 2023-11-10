@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Category from '../Components/Category';
 import Button from '../../Client-Side/Components/MainButton';
 import HeaderAdmin from '../Components/HeaderAdmin';
+import SideBar from '../Components/SideBar';
 import '../Styles/Categories.css';
 
 async function fetchCategories() {
@@ -31,6 +32,8 @@ function CategoriesAdmin() {
 
 
   return (
+    <div className='adminSideBar'>
+    <SideBar/>
     <div className="admin-MOTHER">
       <HeaderAdmin>Categories</HeaderAdmin>
       <Link to="/add-category">
@@ -42,7 +45,7 @@ function CategoriesAdmin() {
           <Category key={category._id} name={category.name} image={`http://localhost:4000/${category.image.split("public")[1]}`} categoryId={category._id} />
         ))}
       </div>
-
+</div>
     </div>
   );
 }
