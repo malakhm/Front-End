@@ -89,10 +89,12 @@ function App() {
             path = "/edit-category:id"
             element={<AdminEditCategory/>}
             />
+
       </Routes>
       <NavbarShow>
         <Footer/>
       </NavbarShow>
+
     </>
   );
 }

@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from './Cards'
 import React from 'react'
+import {Link } from 'react-router-dom';
 import '../Styles/carousel.css';
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -55,11 +56,12 @@ console.log(dataRecommended)
           responsive={responsive}
           
         >
-          
+
           
           {dataRecommended.map((product) => (
-          <Card id = {product._id} name={product.name} description={product.description} price={product.price} image = {`http://localhost:4000/${product.image.split("public")[1]}`}><h3>{product.price}$</h3></Card>)
+          <Card id = {product._id} name={product.name} description={product.description} price={product.price} image = {`http://localhost:4000/${product.image.split("public")[1]}`}><Link to='/Menu'></Card>)
           
+
   
           )}
 

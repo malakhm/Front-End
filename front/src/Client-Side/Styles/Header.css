@@ -70,9 +70,10 @@ header {
     flex-direction: row;
     gap: 50px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     width: 33%;
     padding:0;
+    font-family: Lancelot-Regular;
     
 }
 .Home-container div{
