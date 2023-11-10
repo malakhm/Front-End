@@ -102,60 +102,7 @@ function App() {
    </BrowserRouter>
   */}
 
-  {/* <BrowserRouter>
-    <div className='pages'>
-    <Header/>
-      <Routes>
-        <Route
-        path="/"
-        element={<Home />}
-        />
-
-       <Route
-        path="/Menu"
-        element={<Menu />}
-        />
-
-      <Route
-        path="/About"
-        element={<AboutUs />}
-        />
-
-      <Route
-        path="/Contact"
-        element={<Contact />}
-        />
-
-     
-      </Routes>
-      <Footer/>
-    </div> */}
-   {/* <div className='adminSideBar'>
-    <SideBar/>
-    <Routes>
-    <Route
-          path="/admin"
-          element={<Login />}
-          />
-
-      <Route
-          path="/admin/home"
-          element={<Categoriesadmin />}
-          />
-
-      <Route
-          path="/admin/products"
-          element={<Categoriesadmin />}
-          />
-
-          <Route
-          path="/admin/inbox"
-          element={<Inbox />}
-          />
-
-    </Routes>
-   </div> */}
-   {/* </BrowserRouter> */}
+  
    
     </>
   );
