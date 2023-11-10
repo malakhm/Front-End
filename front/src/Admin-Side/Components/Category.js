@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 const Category = (props) => {
   const [confirmDelete, setConfirmDelete] = useState(false);
-
   const handleDeleteClick = () => {
     setConfirmDelete(true);
   };
@@ -27,22 +26,27 @@ const Category = (props) => {
         // Category successfully deleted
         console.log('Category deleted');
         
-        // After successful deletion, you can update the UI to remove the deleted category
         setConfirmDelete(false);
       }
     } catch (error) {
       console.error('Error deleting category:', error);
     }
   };
-  
+
   
 
   return (
     <div className='admin-category-component-with-icons'>
       <div className='admin-icon-for-category'>
-        <Link to = "/edit-category">
-        <FontAwesomeIcon icon={faPen} className='categories-icon-edit-admin' />
-        </Link>
+      <Link
+  to={{
+    pathname: `/edit-category/${props.categoryId}`, // Specify the target route
+    state: { categoryId: props.categoryId }, // Pass categoryId as a custom prop
+  }}
+>
+  <FontAwesomeIcon icon={faPen} className='categories-icon-edit-admin'  />
+
+</Link>
         <MdDelete
           className='categories-icon-delete-admin'
           onClick={handleDeleteClick}

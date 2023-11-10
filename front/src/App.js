@@ -13,7 +13,14 @@ import Contact from './Client-Side/Pages/Contact';
 import SideBar from '../src/Admin-Side/Components/SideBar';
 import ViewProducts from './Admin-Side/Pages/ViewProducts';
 import AddProducts from '../src/Admin-Side/Pages/AddPro';
+
 import AdminEditCategory from "../src/Admin-Side/Pages/EditCat"
+import AdminEditProduct from '../src/Admin-Side/Pages/EditPro'
+
+
+import SideBarShow from './NavbarShow/SideBarShow';
+import NavbarShow from './NavbarShow/NavbarShow';
+
 import './index.css';
 
 function App() {
@@ -21,11 +28,15 @@ function App() {
   return (
    
     <>
-  
-    <BrowserRouter>
-    <Header/>
 
-    <div className='pages'>
+   
+
+  <NavbarShow>
+
+    <Header/>
+  
+  </NavbarShow>
+  <SideBarShow>  <SideBar/></SideBarShow>
       <Routes>
         <Route
         path="/"
@@ -46,24 +57,9 @@ function App() {
         path="/Contact"
         element={<Contact />}
         />
+    
 
-
-
-
-     
-      </Routes>
-
-      
-    </div>
-    <Footer/>
-
-    </BrowserRouter>
-   
-   {/* <BrowserRouter>
-   <div className='adminSideBar'>
-    <SideBar/>
-    <Routes>
-    <Route
+      <Route
           path="/admin"
           element={<Login />}
           />
@@ -83,7 +79,7 @@ function App() {
           element={<Inbox />}
           />
 
-<Route
+      <Route
           path="/add-product"
           element={<AddProduct />}
           />
@@ -93,17 +89,15 @@ function App() {
             element={<AddCategory/>}
             />
             <Route
-            path = "/edit-category"
+            path = "/edit-category:id"
             element={<AdminEditCategory/>}
             />
 
-    </Routes>
-   </div>
-   </BrowserRouter>
-  */}
+      </Routes>
+      <NavbarShow>
+        <Footer/>
+      </NavbarShow>
 
-  
-   
     </>
   );
 }
