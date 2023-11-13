@@ -20,7 +20,7 @@ const Category = (props) => {
   const handleConfirmDelete = async () => {
     try {
       // Use the categoryId prop in the DELETE request URL
-      const response = await axios.delete(`http://localhost:4000/api/categories/${props.categoryId}`);
+      const response = await axios.delete(`https://abadaibeirut.onrender.com/api/categories/${props.categoryId}`);
       
       if (response.status === 200) {
         // Category successfully deleted

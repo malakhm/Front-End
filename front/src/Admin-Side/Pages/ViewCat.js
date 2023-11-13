@@ -9,7 +9,7 @@ import '../Styles/Categories.css';
 
 async function fetchCategories() {
   try {
-    const response = await axios.get('http://localhost:4000/api/categories/');
+    const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
     return response.data;
   } catch (error) {
     console.error('Error fetching category data:', error);
@@ -42,7 +42,7 @@ function CategoriesAdmin() {
       </Link>
       <div className="categories-container-admin">
         {existingCategoryData.map((category) => (
-          <Category key={category._id} name={category.name} image={`http://localhost:4000/${category.image.split("public")[1]}`} categoryId={category._id} />
+          <Category key={category._id} name={category.name} image={`https://abadaibeirut.onrender.com/${category.image.split("public")[1]}`} categoryId={category._id} />
         ))}
       </div>
 </div>

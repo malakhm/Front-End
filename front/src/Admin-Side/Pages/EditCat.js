@@ -13,7 +13,7 @@ function EditCat() {
 
   useEffect(() => {
     // Fetching the data
-    axios.get('http://localhost:4000/api/categories/')
+    axios.get('https://abadaibeirut.onrender.com/api/categories/')
       .then((response) => {
         const categoryNames = response.data.map((category) => category.name);
         // console.log('Fetched existing category names:', categoryNames);
@@ -39,7 +39,7 @@ function EditCat() {
       formData.append('name', newName);
       formData.append('image', newImage);
 
-      await axios.patch(`http://localhost:4000/api/categories/${id}`, formData);
+      await axios.patch(`https://abadaibeirut.onrender.com/api/categories/${id}`, formData);
 
       setNewName('');
       setNewImage(null);

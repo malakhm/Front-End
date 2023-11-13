@@ -15,7 +15,7 @@ function AddPro() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:4000/api/products/');
+        const response = await axios.get('https://abadaibeirut.onrender.com/api/products/');
         const products = response.data;
         console.log('Fetched existing products:', products);
         setExistingProductNames(products);
@@ -29,7 +29,7 @@ function AddPro() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:4000/api/categories/');
+        const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
         const categories = response.data;
         console.log('Fetched existing categories:', categories);
         setExistingCategoryNames(categories);
@@ -61,8 +61,8 @@ function AddPro() {
       formData.append('image', image);
       formData.append('categoryId', categoryId);
 
-      // Replace 'http://localhost:4000/api/products/' with the correct endpoint for adding a product
-      const response = await axios.post('http://localhost:4000/api/products/', formData);
+      // Replace 'https://abadaibeirut.onrender.com/api/products/' with the correct endpoint for adding a product
+      const response = await axios.post('https://abadaibeirut.onrender.com/api/products/', formData);
 
       if (response.status === 200) {
         setProductName('');

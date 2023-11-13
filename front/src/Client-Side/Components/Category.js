@@ -13,7 +13,7 @@ function Category(prop) {
     
       try{
         
-          await axios.get(`http://localhost:4000/api/categories/${prop.id}`);
+          await axios.get(`https://abadaibeirut.onrender.com/api/categories/${prop.id}`);
           prop.handleCategoryId(prop.id)
           
      

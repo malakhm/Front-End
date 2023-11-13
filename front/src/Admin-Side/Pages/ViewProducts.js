@@ -15,7 +15,7 @@ function ViewProducts() {
 
   async function fetchCategories() {
     try {
-      const response = await axios.get('http://localhost:4000/api/products/');
+      const response = await axios.get('https://abadaibeirut.onrender.com/api/products/');
       return response.data;
     } catch (error) {
       console.error('Error fetching category data:', error);
@@ -52,7 +52,7 @@ function ViewProducts() {
           
                 console.log(product.image),
                 <Card recommended = {product.recommended} name={product.name} description = {product.description} price = {product.price}
-                image={`http://localhost:4000/${product.image.split("public")[1]}`} productId={product._id} />))}
+                image={`https://abadaibeirut.onrender.com/${product.image.split("public")[1]}`} productId={product._id} />))}
       
       </div>
     </div>
