@@ -49,7 +49,7 @@ export default function EditPro() {
       // Set the category ID when a category is selected
       useEffect(() => {
         setCategoryId(newSelectedCategory);
-      }, [newSelectedCategory]);
+      }, []);
     
       const updateProduct = async (e) => {
         e.preventDefault();

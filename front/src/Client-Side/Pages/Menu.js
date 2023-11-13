@@ -46,7 +46,7 @@ const handleName =(names)=>{
    .catch((error) => {
      console.log(error);
    });
- }, [categoryId]);
+ }, []);
 //  console.log("from menu",productByCat)
 
 return (

@@ -21,7 +21,7 @@ const Categories = (prop) => {
       .catch((error) => {
         console.log(error);
       });
-  }, [catId]);
+  }, []);
   
   prop.callBack(catId)
   
