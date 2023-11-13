@@ -2,7 +2,7 @@
 .Home-Product-Description{
     margin: 40px;
 }
-.Home-Cart{
+.Home-Cart {
     /* border: 1px solid red; */
     display: flex;
     margin:20px;
@@ -21,4 +21,40 @@
     object-fit: cover;
     width: 200px;
     height: 200px;
+}
+
+.login-formbutton{
+    width: 200px !important;
+    border: none;
+}
+
+.login-form-for-admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    box-shadow: 3px 6px 9px rgba(128, 128, 128, 0.272);
+    border-radius: 25px;
+    height: 450px;
+    width: 350px;
+
+}
+
+.login-form-for-admin input{
+    width: 200px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form img{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
 }
