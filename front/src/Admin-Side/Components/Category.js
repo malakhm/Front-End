@@ -40,7 +40,7 @@ const Category = (props) => {
       <div className='admin-icon-for-category'>
       <Link
   to={{
-    pathname: `https://abadaibeirut.netlify.app/edit-category/${props.categoryId}`, // Specify the target route
+    pathname: `/edit-category/${props.categoryId}`, // Specify the target route
     state: { categoryId: props.categoryId }, // Pass categoryId as a custom prop
   }}
 >

@@ -24,6 +24,7 @@ function EditCat() {
       });
   }, []);
 
+  console.log(existingCategoryNames)
 
   const updateCategory = async (e) => {
     e.preventDefault();

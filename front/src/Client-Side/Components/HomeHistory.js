@@ -15,7 +15,7 @@ export default function HomeHistory() {
             <p className="Home-History-SubHeader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sint sed, debitis quod minus inventore optio! Assumenda quae architecto nam sunt, dicta, earum accusamus,
              rem atque ea quam magnam ipsam?</p>
 
-            <Link to='https://abadaibeirut.netlify.app/About'><Button>read more</Button>  </Link>
+            <Link to='/About'><Button>read more</Button>  </Link>
         </div>
     </div>
   )
