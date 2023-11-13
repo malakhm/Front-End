@@ -13,7 +13,7 @@ function AddCat(prop) {
     axios.get('http://localhost:4000/api/categories/')
       .then((response) => {
         const categoryNames = response.data.map((category) => category.name);
-        console.log('Fetched existing category names:', categoryNames);
+        // console.log('Fetched existing category names:', categoryNames);
         setExistingCategoryNames(categoryNames);
       })
       .catch((error) => {
@@ -47,7 +47,7 @@ function AddCat(prop) {
       inputElement.value = ''; // This clears the selected file
       inputElement.key = Date.now();
     } catch (e) {
-      console.log(e);
+      // console.log(e);
     }
   }
 

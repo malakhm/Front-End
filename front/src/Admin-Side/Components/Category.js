@@ -24,7 +24,7 @@ const Category = (props) => {
       
       if (response.status === 200) {
         // Category successfully deleted
-        console.log('Category deleted');
+        // console.log('Category deleted');
         
         setConfirmDelete(false);
       }

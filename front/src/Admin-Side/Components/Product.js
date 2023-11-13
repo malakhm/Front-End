@@ -16,6 +16,7 @@ const Product = (props) => {
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [recommended, setRecommended] = useState(props.recommended)
 
+
   const handleDeleteClick = () => {
     setConfirmDelete(true);
   };
@@ -31,7 +32,7 @@ const Product = (props) => {
 
       if (response.status === 200) {
         // Product successfully deleted
-        console.log('Product deleted');
+        
 
         // After successful deletion, you can update the UI to remove the deleted product
         setConfirmDelete(false);
@@ -50,12 +51,14 @@ const Product = (props) => {
     try{
       
         await axios.patch(`http://localhost:4000/api/products/${props.productId}`,{
-          recommended:false
+          recommended:true,
+         
+         
           
         })
-        setRecommended(false)
+        setRecommended(true)
     
-        console.log("from the state remove recommended", recommended)
+        
          
   
     }
@@ -75,12 +78,13 @@ const Product = (props) => {
     try{
       
         await axios.patch(`http://localhost:4000/api/products/${props.productId}`,{
-          recommended:true
+          recommended:false,
+  
           
         })
-        setRecommended(true)
-      
-        console.log("from the state add recommended", recommended)
+        setRecommended(false)
+        
+        ("from the state add recommended", recommended)
      
        
 
@@ -103,7 +107,7 @@ const Product = (props) => {
     <div className="admin-products-component-with-icons">
       <div className="admin-icon-for-products-all">
         <div className="admin-icon-for-products-favorite">
-          {!recommended?
+          {recommended?
           
           <FaStar className="admin-icon-for-products-favorite-star" onClick={handlStarClickAdd}/>
           :

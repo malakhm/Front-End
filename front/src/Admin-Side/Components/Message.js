@@ -17,8 +17,7 @@ const Message = (prop)=>{
             
           })
           SetStatus(true)
-          alert(prop.id)
-          alert(status)
+         
 
           
           
