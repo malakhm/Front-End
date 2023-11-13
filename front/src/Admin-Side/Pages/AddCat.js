@@ -59,7 +59,7 @@ function AddCat(prop) {
 
   return (
     <>
-      <form className="add-cat-form" onSubmit={addCategory}>
+      <form className="add-cat-form" onSubmit={()=>addCategory}>
         <div className="add-input-form-container">
           <h3>Add a Category Here</h3>
 

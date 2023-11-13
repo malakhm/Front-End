@@ -1,8 +1,8 @@
 import React from 'react'
-import appetizers from '../Assets/appetizers.png'
 import '../Styles/Category.css'
-import { useState, useEffect } from 'react'
 import axios from 'axios'
+
+
 function Category(prop) {
 
 
@@ -30,7 +30,7 @@ function Category(prop) {
     
   return (
   
-    <button class="flex-item" onClick={print}>
+    <button class="flex-item" onClick={()=>print}>
         <img className='categoryimage' alt='alt: appetizers image' src={prop.image}/>
         <p>{prop.name}</p>
     </button>

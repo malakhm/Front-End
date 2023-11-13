@@ -24,7 +24,6 @@ function EditCat() {
       });
   }, []);
 
-  console.log(existingCategoryNames)
 
   const updateCategory = async (e) => {
     e.preventDefault();
@@ -65,7 +64,7 @@ function EditCat() {
   return (
     <>
            
-    <form className='add-cat-form' onSubmit={updateCategory}>
+    <form className='add-cat-form' onSubmit={()=>updateCategory}>
     {/* <div className='logo'><img src={Logo}/></div> */}
     <div className='add-input-form-container'>
         <h3>Edit Category Here</h3>
@@ -82,7 +81,7 @@ function EditCat() {
             type="file"
             id="Category-image"
             required
-            onChange={handleImageChange}
+            onChange={()=>handleImageChange}
           />
           <button className="add-cat-btn" type="submit">Add</button>
    

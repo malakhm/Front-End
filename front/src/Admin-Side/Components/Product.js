@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
@@ -52,15 +52,10 @@ const Product = (props) => {
       
         await axios.patch(`https://abadaibeirut.onrender.com/api/products/${props.productId}`,{
           recommended:true,
-         
-         
-          
+
         })
         setRecommended(true)
-    
-        
-         
-  
+
     }
   
   
@@ -76,24 +71,15 @@ const Product = (props) => {
     e.preventDefault()
   
     try{
-      
         await axios.patch(`https://abadaibeirut.onrender.com/api/products/${props.productId}`,{
           recommended:false,
-  
-          
         })
         setRecommended(false)
         
         ("from the state add recommended", recommended)
-     
-       
 
-        
-        
-  
     }
-  
-  
+
     catch(e){
         console.log(e);
   
@@ -109,9 +95,9 @@ const Product = (props) => {
         <div className="admin-icon-for-products-favorite">
           {recommended?
           
-          <FaStar className="admin-icon-for-products-favorite-star" onClick={handlStarClickAdd}/>
+          <FaStar className="admin-icon-for-products-favorite-star" onClick={()=>handlStarClickAdd}/>
           :
-          <CiStar className="admin-icon-for-products-favorite-star-empty" onClick={handlStarClickRemove}/>
+          <CiStar className="admin-icon-for-products-favorite-star-empty" onClick={()=>handlStarClickRemove}/>
           }
           
         </div>
@@ -123,7 +109,7 @@ const Product = (props) => {
             }} >
         <FontAwesomeIcon icon={faPen} className="products-icon-edit-admin" />
         </Link>
-          <MdDelete className="products-icon-delete-admin" onClick={handleDeleteClick} />
+          <MdDelete className="products-icon-delete-admin" onClick={()=>handleDeleteClick} />
         </div>
       </div>
 
@@ -136,8 +122,8 @@ const Product = (props) => {
         {confirmDelete && (
           <div className="delete-confirm-dialog">
             <p>Are you sure you want to delete this product?</p>
-            <button onClick={handleCancelDelete}>Cancel</button>
-            <button onClick={handleConfirmDelete}>Delete</button>
+            <button onClick={()=>handleCancelDelete}>Cancel</button>
+            <button onClick={()=>handleConfirmDelete}>Delete</button>
           </div>
         )}
       </div>

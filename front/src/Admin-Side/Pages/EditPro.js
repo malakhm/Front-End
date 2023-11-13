@@ -15,41 +15,39 @@ export default function EditPro() {
     const [newPrice, setNewProductPrice] = useState(0);
     const [newImage, setNewProductImage] = useState(null);
     const [newSelectedCategory, setNewSelectedCategory] = useState(''); // State to store selected category ID
-    const [categoryId, setCategoryId] = useState(''); // State to store the corresponding categoryId
-
-
-    useEffect(() => {
-        async function fetchData() {
-          try {
-            const response = await axios.get('https://abadaibeirut.onrender.com/api/products/');
-            const products = response.data;
-            console.log('Fetched existing products:', products);
-            setExistingProductNames(products);
-          } catch (error) {
-            console.error(error);
-          }
-        }
-        fetchData();
-      }, []);
+    const [categoryId, setCategoryId] = useState(newSelectedCategory); // State to store the corresponding categoryId
     
       useEffect(() => {
-        async function fetchData() {
-          try {
-            const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
-            const categories = response.data;
-            console.log('Fetched existing categories:', categories);
-            setExistingCategoryNames(categories);
-          } catch (error) {
-            console.error(error);
-          }
-        }
-        fetchData();
+        fetchProduct();
+        fetchCategory();
       }, []);
+
+      const fetchProduct = async()=>{
+        try {
+          const response = await axios.get('https://abadaibeirut.onrender.com/api/products/');
+          const products = response.data;
+          console.log('Fetched existing products:', products);
+          setExistingProductNames(products);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      const fetchCategory = async()=>{
+        try {
+          const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
+          const categories = response.data;
+          console.log('Fetched existing categories:', categories);
+          setExistingCategoryNames(categories);
+        } catch (error) {
+          console.error(error);
+        }
+      }
     
       // Set the category ID when a category is selected
-      useEffect(() => {
-        setCategoryId(newSelectedCategory);
-      }, []);
+      // useEffect(() => {
+      //   setCategoryId(newSelectedCategory);
+      // }, []);
     
       const updateProduct = async (e) => {
         e.preventDefault();
@@ -95,7 +93,7 @@ export default function EditPro() {
 
     return (
         <>
-          <form className="add-pro-form" onSubmit={updateProduct}>
+          <form className="add-pro-form" onSubmit={()=>updateProduct}>
             <div className="add-input-form-container-pro">
               <h3 className="addProTitle">Add a Product Here</h3>
     
@@ -133,7 +131,7 @@ export default function EditPro() {
                 type="file"
                 id="Product-image"
                 required
-                onChange={handleImageChange}
+                onChange={()=>handleImageChange}
               />
     
               <label htmlFor="CategoryDropDown">Select a Category</label>

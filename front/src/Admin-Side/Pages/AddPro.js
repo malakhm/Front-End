@@ -12,34 +12,35 @@ function AddPro() {
   const [selectedCategory, setSelectedCategory] = useState(''); // State to store selected category ID
   const [categoryId, setCategoryId] = useState(''); // State to store the corresponding categoryId
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get('https://abadaibeirut.onrender.com/api/products/');
-        const products = response.data;
-        console.log('Fetched existing products:', products);
-        setExistingProductNames(products);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    fetchData();
-  }, []);
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
-        const categories = response.data;
-        console.log('Fetched existing categories:', categories);
-        setExistingCategoryNames(categories);
-        setCategoryId(selectedCategory);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    fetchData();
+    fetchProduct();
+    fetchCategory();
+
   }, []);
+
+  const fetchProduct =     async ()=> {
+    try {
+      const response = await axios.get('https://abadaibeirut.onrender.com/api/products/');
+      const products = response.data;
+      console.log('Fetched existing products:', products);
+      setExistingProductNames(products);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  const fetchCategory =  async ()=> {
+    try {
+      const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
+      const categories = response.data;
+      console.log('Fetched existing categories:', categories);
+      setExistingCategoryNames(categories);
+      setCategoryId(selectedCategory);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   // Set the category ID when a category is selected
   
@@ -87,7 +88,7 @@ function AddPro() {
 
   return (
     <>
-      <form className="add-pro-form" onSubmit={addProduct}>
+      <form className="add-pro-form" onSubmit={()=>addProduct}>
         <div className="add-input-form-container-pro">
           <h3 className="addProTitle">Add a Product Here</h3>
 
@@ -125,7 +126,7 @@ function AddPro() {
             type="file"
             id="Product-image"
             required
-            onChange={handleImageChange}
+            onChange={()=>handleImageChange}
           />
 
           <label htmlFor="CategoryDropDown">Select a Category</label>

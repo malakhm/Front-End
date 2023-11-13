@@ -3,14 +3,9 @@ import "react-multi-carousel/lib/styles.css";
 import Card from './Cards'
 import React from 'react'
 import '../Styles/carousel.css';
-import Button from '../Components/MainButton'
-import axios from "axios";
-import { useState, useEffect } from "react";
 const ItemCarousel = (prop)=> {
-  const [products, setProducts] = useState(prop.productByCat);
+  // const [products, setProducts] = useState(prop.productByCat);
 
-  // console.log(products," from products carusel")
-  // console.log("lonelyyyyyyyy", prop.productByCat)
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },

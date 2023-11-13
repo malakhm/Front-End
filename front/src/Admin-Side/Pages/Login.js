@@ -1,8 +1,6 @@
 import '../Styles/login.css'
 import Logo from '../Assets/LOGO.png'
-import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 // const LoginForm = ()=>{
 
@@ -71,7 +69,7 @@ const AdminLogin = () => {
               placeholder="userName"
               type="text"
               className="login-formuserName"
-              onChange={handleuserNameChange}
+              onChange={()=>handleuserNameChange}
             />
             <br />
             <br />
@@ -79,7 +77,7 @@ const AdminLogin = () => {
               placeholder="PASSWORD"
               type="password"
               className="login-formpassword"
-              onChange={handlePasswordChange}
+              onChange={()=>handlePasswordChange}
             />
             <br />
             <br />

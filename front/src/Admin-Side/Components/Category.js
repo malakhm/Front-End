@@ -49,7 +49,7 @@ const Category = (props) => {
 </Link>
         <MdDelete
           className='categories-icon-delete-admin'
-          onClick={handleDeleteClick}
+          onClick={()=>handleDeleteClick}
         />
       </div>
       <div className="flex-item">
@@ -59,8 +59,8 @@ const Category = (props) => {
       {confirmDelete && (
         <div className='delete-confirm-dialog'>
           <p>Are you sure you want to delete this category?</p>
-          <button onClick={handleCancelDelete}>Cancel</button>
-          <button onClick={handleConfirmDelete}>Delete</button>
+          <button onClick={()=>handleCancelDelete}>Cancel</button>
+          <button onClick={()=>handleConfirmDelete}>Delete</button>
         </div>
       )}
     </div>
