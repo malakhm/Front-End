@@ -22,7 +22,7 @@ let addReview = async (e)=>{
 
   try{
     
-      await axios.post("http://localhost:4000/api/inbox/",{
+      await axios.post("https://abadaibeirut.onrender.com/api/inbox/",{
         firstName,
         lastName,
         email,

@@ -14,7 +14,7 @@ const CardCarousel = ()=> {
   useEffect(() => {
   
   
-    axios.get(`http://localhost:4000/api/products/bestsellers/recommend`)
+    axios.get(`https://abadaibeirut.onrender.com/api/products/bestsellers/recommend`)
    .then((response) => {
      
     setDataRecommended(response.data);
@@ -60,7 +60,7 @@ console.log(dataRecommended)
           
           {dataRecommended.map((product) => (
             
-          <Card id = {product._id} name={product.name} description={product.description} price={product.price} image = {`http://localhost:4000/${product.image.split("public")[1]}`}><Link to='https://abadaibeirut.netlify.app/Menu'><Button>read more</Button></Link></Card>)
+          <Card id = {product._id} name={product.name} description={product.description} price={product.price} image = {`https://abadaibeirut.onrender.com/${product.image.split("public")[1]}`}><Link to='https://abadaibeirut.netlify.app/Menu'><Button>read more</Button></Link></Card>)
           
 
   

@@ -28,7 +28,7 @@ const Product = (props) => {
   const handleConfirmDelete = async () => {
     try {
       // Use the productId prop in the DELETE request URL
-      const response = await axios.delete(`http://localhost:4000/api/products/${props.productId}`);
+      const response = await axios.delete(`https://abadaibeirut.onrender.com/api/products/${props.productId}`);
 
       if (response.status === 200) {
         // Product successfully deleted
@@ -50,7 +50,7 @@ const Product = (props) => {
   
     try{
       
-        await axios.patch(`http://localhost:4000/api/products/${props.productId}`,{
+        await axios.patch(`https://abadaibeirut.onrender.com/api/products/${props.productId}`,{
           recommended:true,
          
          
@@ -77,7 +77,7 @@ const Product = (props) => {
   
     try{
       
-        await axios.patch(`http://localhost:4000/api/products/${props.productId}`,{
+        await axios.patch(`https://abadaibeirut.onrender.com/api/products/${props.productId}`,{
           recommended:false,
   
           

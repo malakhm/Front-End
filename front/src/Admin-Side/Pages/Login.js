@@ -28,7 +28,7 @@ const AdminLogin = () => {
     console.log(userName, password);
 
     try {
-      const response = await fetch("http://localhost:4000/api/admin/", {
+      const response = await fetch("https://abadaibeirut.onrender.com/api/admin/", {
         method: "POST",
         crossDomain: true,
         headers: {

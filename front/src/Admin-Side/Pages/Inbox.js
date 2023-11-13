@@ -14,7 +14,7 @@ const Inbox = ()=>{
 useEffect(() => {
   
   
-   axios.get('http://localhost:4000/api/inbox/')
+   axios.get('https://abadaibeirut.onrender.com/api/inbox/')
   .then((response) => {
     
     setData(response.data);

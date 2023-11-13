@@ -13,7 +13,7 @@ const Categories = (prop) => {
   }
   // console.log("from catgories:",catId)
   useEffect(() => {
-    axios.get('http://localhost:4000/api/categories/')
+    axios.get('https://abadaibeirut.onrender.com/api/categories/')
       .then((response) => {
         
         setExistingCategoryData(response.data);
@@ -31,7 +31,7 @@ const Categories = (prop) => {
       <h1 className='Categories-title'>Our <span>Categories</span></h1>
       <div className="flex-container">
         {existingCategoryData.map((category) => (
-          <Category handleCategoryId={handleCategoryId} id={category._id} name={category.name} image = {`http://localhost:4000/${category.image.split("public")[1]}`}/>
+          <Category handleCategoryId={handleCategoryId} id={category._id} name={category.name} image = {`https://abadaibeirut.onrender.com/${category.image.split("public")[1]}`}/>
         ))}
       </div>
     </div>

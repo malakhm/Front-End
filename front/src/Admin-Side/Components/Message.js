@@ -12,7 +12,7 @@ const Message = (prop)=>{
     
       try{
         
-          await axios.patch(`http://localhost:4000/api/inbox/${prop.id}`,{
+          await axios.patch(`https://abadaibeirut.onrender.com/api/inbox/${prop.id}`,{
             status:true
             
           })

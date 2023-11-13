@@ -43,7 +43,7 @@ const ItemCarousel = (prop)=> {
         >
           {prop.productByCat.map((product) => (
         
-          <Card id = {product._id} name={product.name} description={product.description} price={product.price} image = {`http://localhost:4000/${product.image.split("public")[1]}`}><h3>{product.price}$</h3></Card>
+          <Card id = {product._id} name={product.name} description={product.description} price={product.price} image = {`https://abadaibeirut.onrender.com/${product.image.split("public")[1]}`}><h3>{product.price}$</h3></Card>
       
          ))}
 

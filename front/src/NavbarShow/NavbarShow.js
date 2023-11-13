@@ -16,7 +16,7 @@ const NavbarShow=({children})=>{
 
     return(
         <div>
-            {(urlName == 'https://abadaibeirut.netlify.app' || urlName == 'https://abadaibeirut.netlify.app/Contact'|| urlName == 'https://abadaibeirut.netlify.app/About' || urlName == 'https://abadaibeirut.netlify.app/Menu') ? children: null}
+            {(urlName == '/' || urlName == '/Contact'|| urlName == '/About' || urlName == '/Menu') ? children: null}
         </div>
     )
 }

@@ -10,7 +10,7 @@ function AddCat(prop) {
 
   useEffect(() => {
     // Fetching the data
-    axios.get('http://localhost:4000/api/categories/')
+    axios.get('https://abadaibeirut.onrender.com/api/categories/')
       .then((response) => {
         const categoryNames = response.data.map((category) => category.name);
         // console.log('Fetched existing category names:', categoryNames);
@@ -37,7 +37,7 @@ function AddCat(prop) {
       formData.append('name', name);
       formData.append('image', image);
 
-      await axios.post('http://localhost:4000/api/categories/', formData);
+      await axios.post('https://abadaibeirut.onrender.com/api/categories/', formData);
 
       setCategoryName('');
       setCategoryImage(null);

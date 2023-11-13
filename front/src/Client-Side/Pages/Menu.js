@@ -15,7 +15,7 @@ function Menu() {
   const [categorytitle, setCategoryTitle] = useState('');
   const [productByCat, setProductByCat] = useState([])
   // useEffect(() => {
-  //   axios.get(`http://localhost:4000/api/products/search?query=${searchquery}`)
+  //   axios.get(`https://abadaibeirut.onrender.com/api/products/search?query=${searchquery}`)
   //     .then((response) => {
   //       console.log('Fetched existing category data:', response.data);
   //       setFiltered(response.data);
@@ -38,7 +38,7 @@ const handleName =(names)=>{
   useEffect(() => {
   
   
-    axios.get(`http://localhost:4000/api/products/byCategoryId/${categoryId}`)
+    axios.get(`https://abadaibeirut.onrender.com/api/products/byCategoryId/${categoryId}`)
    .then((response) => {
      
      setProductByCat(response.data);

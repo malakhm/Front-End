@@ -36,62 +36,62 @@ function App() {
  
       <Routes>
         <Route
-        path="https://abadaibeirut.netlify.app/"
+        path="/"
         element={<Home />}
         />
 
        <Route
-        path="https://abadaibeirut.netlify.app/Menu"
+        path="/Menu"
         element={<Menu />}
         />
 
       <Route
-        path="https://abadaibeirut.netlify.app/About"
+        path="/About"
         element={<AboutUs />}
         />
 
       <Route
-        path="https://abadaibeirut.netlify.app/Contact"
+        path="/Contact"
         element={<Contact />}
         />
     
 
       <Route
-          path="https://abadaibeirut.netlify.app/admin"
+          path="/admin"
           element={<Login />}
           />
 
       <Route
-          path="https://abadaibeirut.netlify.app/admin/home"
+          path="/admin/home"
           element={<Categoriesadmin />}
           />
 
       <Route
-          path="https://abadaibeirut.netlify.app/admin/products"
+          path="/admin/products"
           element={<ViewProducts />}
           />
 
           <Route
-          path="https://abadaibeirut.netlify.app/admin/inbox"
+          path="/admin/inbox"
           element={<Inbox />}
           />
 
       <Route
-          path="https://abadaibeirut.netlify.app/add-product"
+          path="/add-product"
           element={<AddProduct />}
           />
 
             <Route
-            path="https://abadaibeirut.netlify.app/add-category"
+            path="/add-category"
             element={<AddCategory/>}
             />
             <Route
-            path = "https://abadaibeirut.netlify.app/edit-category/:id"
+            path = "/edit-category/:id"
             element={<AdminEditCategory/>}
             />
 
 <Route
-            path = "https://abadaibeirut.netlify.app/edit-product/:id"
+            path = "/edit-product/:id"
             element={<AdminEditCategory/>}
             />
 

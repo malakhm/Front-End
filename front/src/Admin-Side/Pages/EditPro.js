@@ -21,7 +21,7 @@ export default function EditPro() {
     useEffect(() => {
         async function fetchData() {
           try {
-            const response = await axios.get('http://localhost:4000/api/products/');
+            const response = await axios.get('https://abadaibeirut.onrender.com/api/products/');
             const products = response.data;
             console.log('Fetched existing products:', products);
             setExistingProductNames(products);
@@ -35,7 +35,7 @@ export default function EditPro() {
       useEffect(() => {
         async function fetchData() {
           try {
-            const response = await axios.get('http://localhost:4000/api/categories/');
+            const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
             const categories = response.data;
             console.log('Fetched existing categories:', categories);
             setExistingCategoryNames(categories);
@@ -67,7 +67,7 @@ export default function EditPro() {
           formData.append('image', newImage);
           formData.append('categoryId', categoryId);
     
-          const response = await axios.patch(`http://localhost:4000/api/products/${id}`, formData);
+          const response = await axios.patch(`https://abadaibeirut.onrender.com/api/products/${id}`, formData);
     
           if (response.status === 200) {
             setNewProductName('');
