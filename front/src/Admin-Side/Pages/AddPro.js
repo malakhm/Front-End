@@ -33,6 +33,7 @@ function AddPro() {
         const categories = response.data;
         console.log('Fetched existing categories:', categories);
         setExistingCategoryNames(categories);
+        setCategoryId(selectedCategory);
       } catch (error) {
         console.error(error);
       }
@@ -41,9 +42,7 @@ function AddPro() {
   }, []);
 
   // Set the category ID when a category is selected
-  useEffect(() => {
-    setCategoryId(selectedCategory);
-  }, [selectedCategory]);
+  
 
   const addProduct = async (e) => {
     e.preventDefault();
