@@ -19,3 +19,15 @@
     z-index: 999;
     
 }
+
+@media (max-width:860px){
+    .banner-description {
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 40%;
+        
+    }
+}

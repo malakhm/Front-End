@@ -2,6 +2,7 @@ import React from 'react'
 import ZALAME from '../Assets/Zalame.jpg';
 import Button from './MainButton'
 import '../Styles/HomeHistory.css'
+import {Link } from 'react-router-dom';
 export default function HomeHistory() {
   return (
     <div className='Home-History'>
@@ -14,7 +15,7 @@ export default function HomeHistory() {
             <p className="Home-History-SubHeader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sint sed, debitis quod minus inventore optio! Assumenda quae architecto nam sunt, dicta, earum accusamus,
              rem atque ea quam magnam ipsam?</p>
 
-            <Button />  
+            <Link to='/About'><Button>read more</Button>  </Link>
         </div>
     </div>
   )

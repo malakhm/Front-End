@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import Zalame2 from '../Assets/Zalame2.jpg';
-
-import Location from '../Assets/Pasted-image.png';
-
+import Location from '../Assets/Location.png';
 import BATATA from '../Assets/Zalame.jpg';
 import Button from '../Components/MainButton';
 import '../Styles/Contact.css'
-
 
 export default function ContactUs() {
 
@@ -18,11 +15,9 @@ const [email, setEmail] = useState('');
 const [message, setMessage] = useState('');
 
 
-var submit = async (e)=>{
 
 
 let addReview = async (e)=>{
-
   e.preventDefault()
 
   try{
@@ -57,7 +52,7 @@ let addReview = async (e)=>{
     <>
       <div className="Main">
       <h1 className="location-title">
-            Our Physical   <span  className='contact-us-span'>                                                                                                                                                                                                               Address</span>
+            Our Physical   <span  className='contact-us-span'> Address</span>
             </h1>
         <div className="location">
         
@@ -68,8 +63,8 @@ let addReview = async (e)=>{
           <div className="location-info">
             
             <p className="location-desc">
-              Al Mawkib St - Al Zahiyah - E16 -<br />
-              Abu Dhabi - United Arab Emirates
+            Abu Dhabi - United Arab Emirates<br />
+              Al Mawkib St - Al Zahiyah - E16 -
             </p>
           </div>
         </div>
@@ -81,12 +76,10 @@ let addReview = async (e)=>{
        
           <img className="contact-us-image" src={Zalame2} alt="Contact Us" />
 
-
           <form className="contact-us-form" action='POST' onSubmit={addReview}>
             <p className="contact-us-title">
               <span>Contact </span>us
             </p>
-
 
             <label className="contact-us-firstName" htmlFor="firstName" >
               First Name:
@@ -98,6 +91,7 @@ let addReview = async (e)=>{
               name="firstName"
               placeholder="First Name"
               onChange = {(e) => {setFirstName(e.target.value)}}
+              required
               
             />
 
@@ -140,12 +134,10 @@ let addReview = async (e)=>{
               required
             ></textarea>
 
-
             <Button>Submit</Button>
-
           </form>
         </div>
       </div>
     </>
   );
-}}
+}

@@ -1,11 +1,7 @@
-
-
-
 body{
-    margin: auto;
-    
-    
+    margin: auto;  
 }
+
 header {
     display: flex;
     justify-content: center;
@@ -17,11 +13,9 @@ header {
 
     height: 100px;
 
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 
-    
-
-   }
+    }
 
 .Home-container{
     display: flex;
@@ -71,13 +65,16 @@ header {
 .ulheader {
     list-style: none;
     display: flex;
+    /* justify-content: flex-end; */
     justify-content: center;
     flex-direction: row;
     gap: 50px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     width: 33%;
-    padding:0
+    padding:0;
+    font-family: Lancelot-Regular;
+    
 }
 .Home-container div{
     width: 33%;
@@ -111,6 +108,8 @@ a {
     position: absolute;
     margin-left: -150px;
     color:white;
+    z-index: 99;
+    width: 110px;
     
   
     

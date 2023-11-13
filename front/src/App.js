@@ -8,10 +8,19 @@ import Categoriesadmin from './Admin-Side/Pages/ViewCat';
 import Login from '../src/Admin-Side/Pages/Login';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import AddProduct from '../src/Admin-Side/Pages/AddPro';
+import AddCategory from '../src/Admin-Side/Pages/AddCat'
 import Contact from './Client-Side/Pages/Contact';
 import SideBar from '../src/Admin-Side/Components/SideBar';
 import ViewProducts from './Admin-Side/Pages/ViewProducts';
 import AddProducts from '../src/Admin-Side/Pages/AddPro';
+
+import AdminEditCategory from "../src/Admin-Side/Pages/EditCat"
+import AdminEditProduct from '../src/Admin-Side/Pages/EditPro'
+
+
+import SideBarShow from './NavbarShow/SideBarShow';
+import NavbarShow from './NavbarShow/NavbarShow';
+
 import './index.css';
 
 function App() {
@@ -19,11 +28,12 @@ function App() {
   return (
    
     <>
-  
-    {/* <BrowserRouter>
-    <Header/>
+  <NavbarShow>
 
-    <div className='pages'>
+    <Header/>
+  
+  </NavbarShow>
+ 
       <Routes>
         <Route
         path="/"
@@ -44,19 +54,9 @@ function App() {
         path="/Contact"
         element={<Contact />}
         />
+    
 
-     
-      </Routes>
-    </div>
-    <Footer/>
-
-    </BrowserRouter> */}
-   
-   <BrowserRouter>
-   <div className='adminSideBar'>
-    <SideBar/>
-    <Routes>
-    <Route
+      <Route
           path="/admin"
           element={<Login />}
           />
@@ -76,71 +76,25 @@ function App() {
           element={<Inbox />}
           />
 
-<Route
+      <Route
           path="/add-product"
           element={<AddProduct />}
           />
 
-    </Routes>
-   </div>
-   </BrowserRouter>
- 
+            <Route
+            path="/add-category"
+            element={<AddCategory/>}
+            />
+            <Route
+            path = "/edit-category:id"
+            element={<AdminEditCategory/>}
+            />
 
-  {/* <BrowserRouter>
-    <div className='pages'>
-    <Header/>
-      <Routes>
-        <Route
-        path="/"
-        element={<Home />}
-        />
-
-       <Route
-        path="/Menu"
-        element={<Menu />}
-        />
-
-      <Route
-        path="/About"
-        element={<AboutUs />}
-        />
-
-      <Route
-        path="/Contact"
-        element={<Contact />}
-        />
-
-     
       </Routes>
-      <Footer/>
-    </div>
-   <div className='adminSideBar'>
-    <SideBar/>
-    <Routes>
-    <Route
-          path="/admin"
-          element={<Login />}
-          />
+      <NavbarShow>
+        <Footer/>
+      </NavbarShow>
 
-      <Route
-          path="/admin/home"
-          element={<Categoriesadmin />}
-          />
-
-      <Route
-          path="/admin/products"
-          element={<Categoriesadmin />}
-          />
-
-          <Route
-          path="/admin/inbox"
-          element={<Inbox />}
-          />
-
-    </Routes>
-   </div>
-   </BrowserRouter> */}
-   
     </>
   );
 }

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Card from '../Components/Product'
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,65 +8,39 @@ import { MdDelete } from "react-icons/md";
 import Appertizers from '../../Client-Side/Assets/appetizers.png'
 import Button from '../../Client-Side/Components/MainButton'
 import HeaderAdmin from '../Components/HeaderAdmin';
+import SideBar from '../Components/SideBar';
 import '../Styles/Products.css'
 function ViewProducts() {
-  const data = [
-    {
-      "id":123,
-      "name":"Mashawi",
-      "image":"../../Client-Side/Assets/appetizers.png",
-      "description":"yummyy",
-      "price":25,
+  const [existingProductData, setExistingProductData] = useState([]);
 
-    },
-     {
-      "id":123,
-      "name":"Mashawi",
-      "image":"../../Client-Side/Assets/appetizers.png",
-      "description":"yummyy",
-      "price":25,
-      
-    },
+  async function fetchCategories() {
+    try {
+      const response = await axios.get('http://localhost:4000/api/products/');
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching category data:', error);
+      return [];
+    }
+  }
+
+
+
+
+  useEffect(() => {
+    async function fetchData() {
+      const categories = await fetchCategories();
+      setExistingProductData(categories);
+    }
+
+    fetchData();
+
+  },[]);
+
     
-    {
-      "id":123,
-      "name":"Mashawi",
-      "image":"../../Client-Side/Assets/appetizers.png",
-      "description":"yummyy",
-      "price":25,
-      
-    },
-    
-    
-    {
-      "id":123,
-      "name":"Mashawi",
-      "image":"../../Client-Side/Assets/appetizers.png",
-      "description":"yummyy",
-      "price":25,
-      
-    },
-    
-    {
-      "id":123,
-      "name":"Mashawi",
-      "image":"../../Client-Side/Assets/appetizers.png",
-      "description":"yummyy",
-      "price":25,
-      
-    },
-    {
-      "id":123,
-      "name":"Mashawi",
-      "image":"../../Client-Side/Assets/appetizers.png",
-      "description":"yummyy",
-      "price":25,
-      
-    },
-    
-    
-  ]
+  
   return (
+    <div className='adminSideBar'>
+    <SideBar/>
     <div className='admin-MOTHER-products'>
       <HeaderAdmin>Products</HeaderAdmin>
       <Link to="/add-product">
@@ -73,13 +48,14 @@ function ViewProducts() {
       </Link>
           <div className='products-container-admin'>
 
-      {data.map((product) => (
-                console.log(product.image),
-                console.log(product.name),
-                <Card name={product.name} description = {product.description} price = {product.price}  image={Appertizers}/>
-              ))}
+      {existingProductData.map((product) => (
+          
+                console.log(product.recommended),
+                <Card recommended = {product.recommended} name={product.name} description = {product.description} price = {product.price}
+                image={`http://localhost:4000/${product.image.split("public")[1]}`} productId={product._id} />        ))}
       
       </div>
+    </div>
     </div>
   )
 }

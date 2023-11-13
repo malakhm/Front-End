@@ -14,7 +14,7 @@ const Home = () => {
   
     return (
         <div className="home">
-
+            <Banner/>
             <HomeHistory/>
             <div className='Home-Carousel-Header-Container'>
             <p className="Home-Carousel-Header"><span className='Home-Carousel-Span'> Our</span> Bestsellers</p>

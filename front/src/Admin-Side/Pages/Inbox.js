@@ -1,6 +1,7 @@
 import Message from "../Components/Message";
 import '../Styles/Inbox.css'
 import HeaderAdmin from "../Components/HeaderAdmin";
+import SideBar from "../Components/SideBar";
 import { useState, useEffect } from "react";
 import axios from "axios";
 const Inbox = ()=>{
@@ -24,14 +25,11 @@ useEffect(() => {
 }, []);
 
     
-  const readFeature = ()=>{
-    data.map((record)=>{
-      console.log(record._id)
-    })
-  }
-readFeature()
+ 
 
     return(
+      <div className="adminSideBar">
+      <SideBar/>
         <div className="big-big-admin-container">
             <HeaderAdmin>Inbox</HeaderAdmin>
         
@@ -39,18 +37,20 @@ readFeature()
            
             
             {data.map((message) => (
-                console.log(message.status),
+           
                 <Message 
                 firstName={message.firstName} 
                 lastName={message.lastName} 
                 email = {message.email}
                 status = {message.status}
                 id = {message._id}
+               
                 message = {message.message}
                 />
               ))}
               
           </div>
+        </div>
         </div>
     )
 }
