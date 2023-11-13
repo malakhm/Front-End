@@ -36,7 +36,7 @@ function CategoriesAdmin() {
     <SideBar/>
     <div className="admin-MOTHER">
       <HeaderAdmin>Categories</HeaderAdmin>
-      <Link to="/add-category">
+      <Link to="https://abadaibeirut.netlify.app/add-category">
       <Button>Add Category</Button>
 
       </Link>

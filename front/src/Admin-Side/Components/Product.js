@@ -118,7 +118,7 @@ const Product = (props) => {
         <div className="admin-icon-for-products">
         <Link
             to={{
-              pathname: `/edit-product/${props.productId}`, // Specify the target route
+              pathname: `https://abadaibeirut.netlify.app/edit-product/${props.productId}`, // Specify the target route
               state: { productId: props.productId }, // Pass categoryId as a custom prop
             }} >
         <FontAwesomeIcon icon={faPen} className="products-icon-edit-admin" />

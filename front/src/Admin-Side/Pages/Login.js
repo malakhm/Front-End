@@ -50,7 +50,7 @@ const AdminLogin = () => {
         alert("successfull login");
         localStorage.setItem("authToken", data.data.userName); // Replace "yourAuthTokenValue" with the actual authentication token or flag.
 
-        navigate("/admin/home");
+        navigate("https://abadaibeirut.netlify.app/admin/home");
 
       } else {
         alert("Login failed");
