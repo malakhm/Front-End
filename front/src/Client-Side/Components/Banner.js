@@ -1,4 +1,3 @@
-import banner from '../Assets/banner.png'
 import '../Styles/banner.css'
 import banner1 from '../Assets/burak.jpg'
 

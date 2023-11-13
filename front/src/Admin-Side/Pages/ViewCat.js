@@ -7,28 +7,24 @@ import HeaderAdmin from '../Components/HeaderAdmin';
 import SideBar from '../Components/SideBar';
 import '../Styles/Categories.css';
 
-async function fetchCategories() {
-  try {
-    const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching category data:', error);
-    return [];
-  }
-}
 
 function CategoriesAdmin() {
   const [existingCategoryData, setExistingCategoryData] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const categories = await fetchCategories();
-      setExistingCategoryData(categories);
-    }
-
-    fetchData();
+    fetchCategory();
 
   }, []);
+
+  const fetchCategory = async()=>{
+    try {
+      const response = await axios.get('https://abadaibeirut.onrender.com/api/categories/');
+      setExistingCategoryData(response.data);
+    } catch (error) {
+      console.error('Error fetching category data:', error);
+      return [];
+    }
+  }
 
 
   return (

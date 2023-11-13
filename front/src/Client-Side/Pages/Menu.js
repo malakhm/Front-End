@@ -9,11 +9,14 @@ import { useState, useEffect } from 'react';
 
 function Menu() {
 
-  const [searchquery, setSearchQuery] = useState("");
-  const [filtered, setFiltered] = useState([])
-  const [categoryId, setCategoryId] = useState('');
-  const [categorytitle, setCategoryTitle] = useState('');
   const [productByCat, setProductByCat] = useState([])
+  const [categoryId, setCategoryId] = useState('');
+
+  // const [searchquery, setSearchQuery] = useState("");
+  // const [filtered, setFiltered] = useState([])
+  
+  // const [categorytitle, setCategoryTitle] = useState('');
+  
   // useEffect(() => {
   //   axios.get(`https://abadaibeirut.onrender.com/api/products/search?query=${searchquery}`)
   //     .then((response) => {
@@ -28,9 +31,9 @@ function Menu() {
   // console.log(filtered)
 
 
-const handleName =(names)=>{
-  setCategoryTitle(names)
-}
+// const handleName =(names)=>{
+//   setCategoryTitle(names)
+// }
   const handleCategoryId = (data) =>{
     setCategoryId(data)
   }

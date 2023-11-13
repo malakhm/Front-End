@@ -2,7 +2,7 @@ import { useState } from "react"
 import '../Styles/Message.css'
 import axios from "axios";
 const Message = (prop)=>{
-    const [message, SetMessage] = useState('')
+    // const [message, SetMessage] = useState('')
     const [status, SetStatus] = useState(prop.status)
 
 
@@ -35,7 +35,7 @@ const Message = (prop)=>{
     return(
         <>
         {status?
-        <button className="Message" onClick={markRead}>
+        <button className="Message" onClick={()=>markRead}>
             
             <div className="text-container">
                 <p>Message From: <span>{prop.firstName}{prop.lastName}</span></p>
@@ -46,7 +46,7 @@ const Message = (prop)=>{
         
         </button>:
 
-        <button className="Message unread-bg" onClick={markRead}>
+        <button className="Message unread-bg" onClick={()=>markRead}>
             
         <div className="text-container unread-bg">
         <p className="unread">Message From: {prop.firstName}{prop.lastName}</p>

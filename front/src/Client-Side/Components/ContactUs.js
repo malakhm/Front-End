@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import Zalame2 from '../Assets/Zalame2.jpg';
 import Location from '../Assets/Location.png';
-import BATATA from '../Assets/Zalame.jpg';
 import Button from '../Components/MainButton';
 import '../Styles/Contact.css'
 
@@ -76,7 +75,7 @@ let addReview = async (e)=>{
        
           <img className="contact-us-image" src={Zalame2} alt="Contact Us" />
 
-          <form className="contact-us-form" action='POST' onSubmit={addReview}>
+          <form className="contact-us-form" action='POST' onSubmit={()=>addReview}>
             <p className="contact-us-title">
               <span>Contact </span>us
             </p>

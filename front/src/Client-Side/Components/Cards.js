@@ -1,7 +1,6 @@
 
 // import dncwlkfvjwlk
 import '../Styles/Carts.css'
-import Button from './MainButton'
 
 const Cards = (prop)=>{
     const {children} = prop
