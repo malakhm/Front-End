@@ -60,7 +60,7 @@ console.log(dataRecommended)
           
           {dataRecommended.map((product) => (
             
-          <Card id = {product._id} name={product.name} description={product.description} price={product.price} image = {`https://abadaibeirut.onrender.com/${product.image.split("public")[1]}`}><Link to='https://abadaibeirut.netlify.app/Menu'><Button>read more</Button></Link></Card>)
+          <Card id = {product._id} name={product.name} description={product.description} price={product.price} image = {`https://abadaibeirut.onrender.com/${product.image.split("public")[1]}`}><Link to='/Menu'><Button>read more</Button></Link></Card>)
           
 
   

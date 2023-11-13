@@ -43,7 +43,7 @@ function ViewProducts() {
     <SideBar/>
     <div className='admin-MOTHER-products'>
       <HeaderAdmin>Products</HeaderAdmin>
-      <Link to="https://abadaibeirut.netlify.app/add-product">
+      <Link to="/add-product">
         <Button className="add-product-button-admin">Add Product</Button>
       </Link>
           <div className='products-container-admin'>
