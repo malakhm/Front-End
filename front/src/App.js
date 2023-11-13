@@ -86,7 +86,12 @@ function App() {
             element={<AddCategory/>}
             />
             <Route
-            path = "/edit-category:id"
+            path = "/edit-category/:id"
+            element={<AdminEditCategory/>}
+            />
+
+<Route
+            path = "/edit-product/:id"
             element={<AdminEditCategory/>}
             />
 

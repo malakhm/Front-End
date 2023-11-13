@@ -7,7 +7,7 @@ function EditCat() {
   const [newName, setNewName] = useState('')
   const [newImage, setNewImage] = useState('')
   const { id } = useParams();
-  console.log('id here: ',id)
+  // console.log('id here: ',id)
  
   const [existingCategoryNames, setExistingCategoryNames] = useState([]);
 
@@ -16,7 +16,7 @@ function EditCat() {
     axios.get('http://localhost:4000/api/categories/')
       .then((response) => {
         const categoryNames = response.data.map((category) => category.name);
-        console.log('Fetched existing category names:', categoryNames);
+        // console.log('Fetched existing category names:', categoryNames);
         setExistingCategoryNames(categoryNames);
       })
       .catch((error) => {
