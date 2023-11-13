@@ -3,80 +3,94 @@ import Logo from '../Assets/LOGO.png'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-const LoginForm = ()=>{
-    const [userName, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-    const[response,setResponse] = useState()
+import { useNavigate } from "react-router-dom";
+// const LoginForm = ()=>{
 
-    
-let checkAccount = async (e)=>{
-    e.preventDefault()
-  
-    try{
-      
-        var response = await axios.post(`http://localhost:4000/api/admin/signin`,{
-         userName:userName,
-          password:password,
-        })
-        setUsername(userName);
-        setPassword(password);
-           
-        setResponse(response)
-  
+
+const AdminLogin = () => {
+
+  const [userName, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate(); 
+
+
+  const handleuserNameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    console.log(userName, password);
+
+    try {
+      const response = await fetch("http://localhost:4000/api/admin/", {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          userName,
+          password,
+        }),
+      });
+
+      const data = await response.json();
+
+      console.log(data, "data");
+
+      if (data.status === "ok") {
+        alert("successfull login");
+        localStorage.setItem("authToken", data.data.userName); // Replace "yourAuthTokenValue" with the actual authentication token or flag.
+
+        navigate("/admin/home");
+
+      } else {
+        alert("Login failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
     }
-  
-  
-    catch(e){
-        console.log(e);
-  
-    }
-  
-  }
-var url
-  if(response){
-    url = '/admin/categories'
+  };
 
-  }else{url='/admin'}
-        
-  
-  
-    return(
-       
-   <body className='login-form-body' onSubmit={checkAccount}>
-   
-           
-            <form className='login-form' >
- 
-                <h3>Login Here</h3>
+  return (
+    <div>
+      <div className="login-form">
+        <h1 className="login-formbuttonh1">
+          <img src={Logo} alt="Admin" />
+          <br />
+          <form className="login-form-for-admin" onSubmit={handleSubmit}>
+            <input
+              placeholder="userName"
+              type="text"
+              className="login-formuserName"
+              onChange={handleuserNameChange}
+            />
+            <br />
+            <br />
+            <input
+              placeholder="PASSWORD"
+              type="password"
+              className="login-formpassword"
+              onChange={handlePasswordChange}
+            />
+            <br />
+            <br />
+            <button className="login-formbutton" type="submit">
+              Login
+            </button>
+          </form>
+        </h1>
+      </div>
+    </div>
+  );
+};
 
-                
-        
-                <label for="username">Username</label>
-                <input 
-                type="text" 
-                placeholder="Email or Phone"
-                 id="username"
-                 onChange = {(e) => {setUsername(e.target.value)}}
-                 />
-        
-                <label for="password">Password</label>
-                <input type="password"
-                 placeholder="Password"
-                  id="password"
-                  onChange = {(e) => {setPassword(e.target.value)}}
-                  />
-            
-                <Link to={url}><button>Log In</button></Link>
-             
-
-                
-            
-                
-               
-            </form>
-    </body>
-        
-    )
-}
-
-export default LoginForm
+export default AdminLogin;
