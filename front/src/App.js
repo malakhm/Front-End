@@ -36,7 +36,7 @@ function App() {
  
       <Routes>
         <Route
-        path="https://abadaibeirut-front.onrender.com/"
+        path="/"
         element={<Home />}
         />
 
