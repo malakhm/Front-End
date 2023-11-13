@@ -82,6 +82,7 @@ function AddCat(prop) {
           />
           <button className="add-cat-btn" type="submit">Add</button>
         </div>
+        {/* hello */}
       </form>
     </>
   );
