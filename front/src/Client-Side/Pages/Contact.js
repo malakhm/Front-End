@@ -7,6 +7,7 @@ function Contact() {
     <div>
  
       <ContactUs/>
+      
 
 
     </div>

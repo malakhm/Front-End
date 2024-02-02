@@ -12,8 +12,6 @@ const Inbox = ()=>{
 
   
 useEffect(() => {
-  
-  
    axios.get('https://abadaibeirut.onrender.com/api/inbox/')
   .then((response) => {
     

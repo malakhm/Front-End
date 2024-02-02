@@ -38,7 +38,7 @@ function CategoriesAdmin() {
       </Link>
       <div className="categories-container-admin">
         {existingCategoryData.map((category) => (
-          <Category key={category._id} name={category.name} image={`https://abadaibeirut.onrender.com/${category.image.split("public")[1]}`} categoryId={category._id} />
+          <Category  name={category.name} image={`https://abadaibeirut.onrender.com/${category.image.split("public")[1]}`} categoryId={category._id} />
         ))}
       </div>
 </div>

@@ -7,7 +7,7 @@ import '../Styles/Menu.css'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-function Menu() {
+function Menu(prop) {
 
   const [productByCat, setProductByCat] = useState([])
   const [categoryId, setCategoryId] = useState('');
@@ -15,7 +15,7 @@ function Menu() {
   // const [searchquery, setSearchQuery] = useState("");
   // const [filtered, setFiltered] = useState([])
   
-  // const [categorytitle, setCategoryTitle] = useState('');
+  const [categorytitle, setCategoryTitle] = useState('');
   
   // useEffect(() => {
   //   axios.get(`https://abadaibeirut.onrender.com/api/products/search?query=${searchquery}`)
@@ -31,13 +31,15 @@ function Menu() {
   // console.log(filtered)
 
 
-// const handleName =(names)=>{
-//   setCategoryTitle(names)
-// }
+const handleName =(names)=>{
+  setCategoryTitle(names)
+}
+
+
   const handleCategoryId = (data) =>{
     setCategoryId(data)
   }
-
+ 
   useEffect(() => {
   
   
@@ -45,12 +47,13 @@ function Menu() {
    .then((response) => {
      
      setProductByCat(response.data);
+     console.log(response.data);
    })
    .catch((error) => {
      console.log(error);
    });
- }, []);
-//  console.log("from menu",productByCat)
+ }, [])
+
 
 return (
     <div>
@@ -62,7 +65,7 @@ return (
 
             <form className="menu-middle-separator-search-form"> 
                 <input type="text" placeholder="search" className="menu-search-input-client"
-                 onChange={(e) => setSearchQuery(e.target.value)}/>
+                />
                 <Button>Search</Button>
             </form>
         </div>

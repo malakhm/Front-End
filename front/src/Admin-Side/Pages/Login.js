@@ -46,9 +46,10 @@ const AdminLogin = () => {
 
       if (data.status === "ok") {
         alert("successfull login");
+        console.log("done")
         localStorage.setItem("authToken", data.data.userName); // Replace "yourAuthTokenValue" with the actual authentication token or flag.
 
-        navigate("/admin/home");
+        navigate("/admin/products");
 
       } else {
         alert("Login failed");
